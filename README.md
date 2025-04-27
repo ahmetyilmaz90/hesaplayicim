@@ -6,3 +6,10 @@ Ardından 3 ay boyunca çalışarak kodlama sürecini tamamladım ve siteyi yay�
 Projemi geliştirirken Adobe Illustrator ve Adobe Photoshop programlarını; kodlama sürecinde ise Visual Studio Code IDE'sini kullandım.
 Teknoloji tarafında ise HTML, CSS ve JavaScript dillerinden yararlandım.
 İlk projem olduğu için hâlâ bazı eksiklikleri bulunmakla birlikte, öğrendiğim teknolojilerle geliştirmeye devam ediyorum.
+
+~ENGLISH~
+This is my first published procject.
+LINK: hesaplayicim.com
+In this project, I realized every stages all by myself.
+First of all, I designed the project in my mind and determined a brand identity by creating a logo.
+Then, 
