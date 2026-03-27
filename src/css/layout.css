@@ -1,0 +1,144 @@
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    padding: 25px 100px;
+    background-color: var(--HC-primary-color-500);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 25%);
+}
+
+.inner-header {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Responsive Header */
+@media (max-width: 1300px) {
+    header {
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    .inner-header {
+        flex-wrap: wrap;
+    }
+
+    main {
+        flex-direction: column;
+    }
+}
+
+main {
+    display: flex;
+    flex: 1;
+    margin: 50px auto;
+    gap: 50px;
+}
+
+.main {
+    max-width: 700px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+
+
+/*FOOTER*/
+
+footer {
+    width: 100%;
+    background-color: var(--HC-primary-color-300);
+    padding: 40px 20px;
+}
+
+@media (max-width: 992px) {
+    footer {
+        padding: 10px;
+    }
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 10px 0;
+    border-bottom: 2px solid var(--HC-natural-color-300);
+}
+
+footer a {
+    font-size: 32px;
+    color: var(--HC-natural-color-200);
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 992px) {
+    footer a {
+        font-size: 12px;
+    }
+}
+
+footer a:hover {
+    color: var(--HC-natural-color-300);
+}
+
+footer #mail-addres {
+    color: var(--HC-accent-color-500);
+    border-bottom: 2px solid var(--HC-natural-color-300);
+    padding-bottom: 5px;
+}
+
+footer #mail-addres:hover {
+    color: var(--HC-accent-color-700);
+}
+
+#footernote {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.copyright {
+    font-size: 24px;
+    color: var(--HC-natural-color-200);
+}
+
+@media (max-width: 992px) {
+    .copyright {
+        font-size: 16px;
+    }
+}
+
+.copyright::before {
+    content: "© ";
+    color: var(--HC-secondary-color-500);
+    vertical-align: middle;
+}
+
+.social-media-icons {
+    display: flex;
+    gap: 15px;
+}
+
+@media (max-width: 572px){
+    .social-media-icons img {
+        width: 50px;
+        height: 50px;
+    }
+}

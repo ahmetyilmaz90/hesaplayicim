@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /src/page/components/
+
+Sitemap: https://hesaplayicim.com/sitemap.xml

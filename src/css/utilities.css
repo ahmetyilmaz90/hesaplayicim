@@ -1,0 +1,30 @@
+.center-text { text-align: center; }
+
+.flex { display: flex; }
+
+.flex-col { flex-direction: column; }
+.flex-row { flex-direction: row; }
+
+.flex-1 { flex: 1; }
+
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+
+.gap-5 { gap: 5px; }
+.gap-30 { gap: 30px; }
+
+/*Responsive durumlarda yukarıdan aşağı sığsınlar diye*/
+@media (max-width: 769px) {
+    .stack-mobile {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.notactive {
+    display: none;
+}
+
+.active {
+    display: flex;
+}

@@ -1,0 +1,82 @@
+label, #result-group {
+    font-size: 24px;
+    color: var(--HC-natural-color-100);
+    font-weight: bolder;
+}
+
+input, select, textarea {
+    background-color: var(--HC-primary-color-300);
+    border: 1px solid var(--HC-natural-color-300);
+    color: var(--HC-natural-color-200);
+    height: 50px;
+    font-size: 24px;
+    border-radius: 10px;
+    outline: none;
+    padding: 0px 5px;
+    width: 100%;
+    transition: outline 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+textarea {
+    resize: vertical;
+    font-size: 23px;
+    height: auto;
+    padding: 10px;
+    line-height: 1.5;
+    vertical-align: top;
+    min-height: 120px;
+}
+
+output {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    margin-top: 12px;
+    border: 1px solid var(--HC-natural-color-300);
+    background-color: var(--HC-primary-color-300);
+    border-radius: 10px;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 1.4;
+    color: #fff;
+    white-space: normal;
+    word-wrap: break-word;
+    min-height: 120px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    transition: border 0.3s ease-in-out;
+}
+
+input::placeholder {
+    font-size: 24px;
+}
+
+@media (max-width: 576px) {
+    label, #result-group {
+        font-size: 16px;
+    }
+
+    output {
+        padding: 8px 10px;
+        font-size: 16px;
+        min-height: 100px;
+    }
+
+    input, select, textarea {
+        font-size: 16px;
+    }
+    textarea {
+        height: 100px;
+    }
+
+    input::placeholder {
+        font-size: 16px;
+    }
+}
+
+.mini-inpt, select {
+    width: fit-content;
+}
+
+input:focus, select:focus, textarea:focus, output:hover {
+    border-color: var(--HC-secondary-color-500); /* Üzerine gelince odaklamak için */
+}
