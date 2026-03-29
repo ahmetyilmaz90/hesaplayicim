@@ -33,6 +33,7 @@
     <!---->
 
     <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="stylesheet" href="/src/css/special/sayi-tabani.css">
 
     <title>Sayı Tabanı Çevirme - Hesaplayıcım</title>
 
@@ -223,7 +224,7 @@
                         </div>
                         <div class="flex flex-col gap-5">
                             <label for="sayi">Tabanı Değişecek Sayı</label>
-                            <input type="number" id="sayi" placeholder="Tabanı değişecek sayıyı giriniz." required>
+                            <input id="sayi" placeholder="Tabanı değişecek sayıyı giriniz." required>
                         </div>
                     </div>
 
@@ -247,80 +248,45 @@
         </div>
 
         <div class="about">
-          <h3>Yüzde Hesaplama Hakkında</h3>
-          <p>
-            Yüzde hesaplama, günlük hayatın en sık ihtiyaç duyulan matematik işlemlerinden biridir. Markette indirimli ürün alırken, maaş zammı hesaplarken ya da sınav notunuzu değerlendirirken yüzde hesabına başvurursunuz.
-          </p>
+          <h3>Sayı Tabanı Çevirme Hakkında</h3>
+          <p>Sayı tabanı, bir sayı sisteminde kullanılan rakam sayısını ifade eder. Birler basamağı kullanılan son rakama gelince bir sonraki basamağa, yani onlar basamağına devam edilerek sayılar ifade edilir. Günlük hayatta insanlar 10 tabanını (decimal) kullanırken, bilgisayarlar 2 tabanını (binary), programcılar ise sıklıkla 8 (octal) ve 16 tabanını (hexadecimal) kullanır.</p>
 
-          <h4>Temel Yüzde Formülü</h4>
-          <p>
-            Bir sayının yüzdesini bulmak için şu formülü kullanabilirsiniz:
-          </p>
-          <pre><code>Yüzde (%) = (Parça ÷ Bütün) × 100
-Sonuç = (Yüzde ÷ 100) × Sayı</code></pre>
-
-          <h4>Yüzde İndirim Hesaplama</h4>
-          <p>
-            Bir ürünün indirimli fiyatını bulmak için orijinal fiyatı indirim oranıyla çarpıp 100'e bölün, çıkan değeri orijinal fiyattan çıkarın.
-          </p>
-          <pre><code>İndirim Tutarı = Fiyat × (İndirim Oranı / 100)
-İndirimli Fiyat = Fiyat - İndirim Tutarı</code></pre>
-          <p><strong>Örnek:</strong> 1.500 TL fiyatlı üründe %30 indirim → 450 TL indirim → <strong>1.050 TL</strong></p>
-
-          <h4>Yüzde Artış Hesaplama</h4>
-          <p>
-            Fiyat, maaş veya herhangi bir değer artışını hesaplamak için:
-          </p>
-          <pre><code>Yeni Değer = Eski Değer × (1 + Artış Oranı / 100)</code></pre>
-          <p><strong>Örnek:</strong> 20.000 TL maaşa %15 zam → Yeni maaş <strong>23.000 TL</strong></p>
-
-          <h4>KDV Hesaplama</h4>
-          <p>
-            Türkiye'de %20 KDV oranı için KDV dahil fiyat şöyle hesaplanır:
-          </p>
-          <pre><code>KDV Dahil Fiyat = Net Fiyat × 1,20</code></pre>
-          <p><strong>Örnek:</strong> 500 TL net fiyat → KDV dahil <strong>600 TL</strong></p>
-
-          <h4>Hızlı Hesaplama İpuçları</h4>
+          <h4>Yaygın Sayı Sistemleri</h4>
           <ul>
-            <li><strong>%10</strong> → Sayıyı 10'a böl</li>
-            <li><strong>%25</strong> → Sayıyı 4'e böl</li>
-            <li><strong>%50</strong> → Sayıyı 2'ye böl</li>
-            <li><strong>%15</strong> → %10 + %5 topla</li>
+            <li><strong>2 Tabanı (Binary):</strong> Sadece 1 ve 0 rakamları kullanılır.</li>
+            <li><strong>8 Tabanı (Octal):</strong> 0'dan 7'ye kadar rakamlar kullanılır</li>
+            <li><strong>10 Tabanı (Decimal):</strong> Günlük hayatta kullanılan sistemdir. 0'dan 9'a kadar olan rakamlar kullanılır.</li>
+            <li><strong>16 Tabanı (Hexadecimal):</strong> 0-9 arası rakamlar ve 10-16 için A-F harfleri kullanılır.</li>
           </ul>
 
-          <h4>Dikkat Edilmesi Gereken Nokta</h4>
-          <p>
-            Yüzde artış ve yüzde azalış simetrik değildir. %50 artıştan sonra %50 azalış sizi başlangıç noktasına geri götürmez: 100 TL → +%50 → 150 TL → -%50 → 75 TL.
-          </p>
+          <h4>Sayı Sistemlerini Birbirine Çevirme</h4>
+          <p>Peki gelelim bu hesaplama aletininde konusu olan sayı tabanlarını birbirine çevirme işine. Öncelikle bize verilen sayıyı 10 tabanına daha sonra da istenilen diğer tabana çevirmek en çok tercih edilen yöntemdir.</p>
+          <p><strong>1 - Sayıyı Decimale Çevir:</strong> Her basamak, bulunduğu konumun taban kuvveti ile çarpılıp toplanır.<strong> Örnek:</strong>  </p>
+          <pre><code>1101 = (1×2³) + (1×2²) + (0×2¹) + (1×2⁰) = 8 + 4 + 0 + 1 = 13</code></pre>
+          <p><strong>2 - Decimal Sayıyı İstenilen Tabana Çevir</strong>Bir decimal sayıyı başka bir tabana çevirmek için sayıyı hedef tabana bölmeye devam edilir, kalanlar ters sırayla okunur.<strong> Örnek:</strong></p>
+          <pre><code>13 ÷ 2 = 6 kalan 1
+6 ÷ 2 = 3 kalan 0
+3 ÷ 2 = 1 kalan 1
+1 ÷ 2 = 0 kalan 1
+
+Kalanlar ters okunur -> 1101</code></pre>
+
+        <h4>Hexadecimal Ne İşe Yarar ?</h4>
+        <p>Büyük çoğunluk internette #FFFFFF veya #000000 gibi renk kodlarını görmüştür. Bunlar aslında birer hexadecimal sayıdır. Renk kodu 6 haneli hex sayısından oluşur ve her 2 hane sırasıyla Kırmızı, Yeşil ve Mavi (RGB) kanalını temsil eder. RGB sisteminde her kanal 0 ile 255 arasında bir değer alır; 0 o rengin hiç olmadığını, 255 ise tam yoğunlukta olduğunu ifade eder.</p>
+        <p>Örneğin #FF0000 incelendiğinde FF kırmızı kanalının tam dolu yani 255, 00 ise yeşil ve mavinin sıfır olduğu görülür. Bu da saf kırmızı rengi verir. </p>
+        
+        <h4>Deneme Alanı: </h4>
+        <div class="color-preview">
+          <div class="sliders">
+            <label>R <input type="range" min="0" max="255" value="255" id="r" oninput="updateColor()"> <span id="rv">255</span></label>
+            <label>G <input type="range" min="0" max="255" value="0" id="g" oninput="updateColor()"> <span id="gv">0</span></label>
+            <label>B <input type="range" min="0" max="255" value="0" id="b" oninput="updateColor()"> <span id="bv">0</span></label>
+          </div>
+          <div id="box" style="width:100px;height:100px;background:#ff0000;border-radius:8px;"></div>
+          <p id="hex">#FF0000</p>
+        </div>        
         </div>
            
-      </div>
-
-      <div class="sidebar">
-          <div class="sidebar__header">
-              <span>Sıkça Sorulan Sorular</span>
-          </div>
-
-          <ul class="sidebar__list">
-              <li class="sidebar__item">
-                  <details>
-                      <summary>Hesaplamalar ne kadar doğru?</summary>
-                      <div class="sidebar__content">
-                          Hesaplamalar matematiksel formüllere dayalıdır ve ortalama değerler üzerinden çalışır.
-                      </div>
-                  </details>
-              </li>
-
-              <li class="sidebar__item">
-                  <details>
-                      <summary>0! neden 1’e eşittir?</summary>
-                      <div class="sidebar__content">
-                          Faktöriyel tanımı gereği 0! = 1 kabul edilir çünkü çarpımın etkisiz elemanıdır.
-                      </div>
-                  </details>
-              </li>
-          </ul>
       </div>
 
     </main>
@@ -352,5 +318,18 @@ Sonuç = (Yüzde ÷ 100) × Sayı</code></pre>
     
     <script type="module" src="/src/js/index.js"></script>
     <script src="/src/js/math/sayi-tabani.js"></script>
+    <script>
+      function updateColor() {
+        const r = document.getElementById('r').value;
+        const g = document.getElementById('g').value;
+        const b = document.getElementById('b').value;
+        document.getElementById('rv').textContent = r;
+        document.getElementById('gv').textContent = g;
+        document.getElementById('bv').textContent = b;
+        const hex = '#' + [r,g,b].map(v => parseInt(v).toString(16).padStart(2,'0').toUpperCase()).join('');
+        document.getElementById('box').style.background = hex;
+        document.getElementById('hex').textContent = hex;
+      }
+    </script>
 </body>
 </html>

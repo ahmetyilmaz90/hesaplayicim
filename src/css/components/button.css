@@ -86,3 +86,17 @@
         height: 24px;
     }
 }  
+
+.btn-hero {
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+    outline: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-hero:hover {
+    transform: translateY(-5px);
+    
+}

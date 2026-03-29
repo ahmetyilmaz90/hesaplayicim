@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BZDRG4TWWR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZDRG4TWWR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-BZDRG4TWWR');
-</script>
+    gtag('config', 'G-BZDRG4TWWR');
+  </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Gereçk sayfa urlsini tarayıcıya tanıtmak için-->
-    <link rel="canonical" href="https://hesaplayicim.com/matematik/faktoriyel-hesaplama">
+  <!--Gereçk sayfa urlsini tarayıcıya tanıtmak için-->
+  <link rel="canonical" href="https://hesaplayicim.com/matematik/faktoriyel-hesaplama">
 
-    <!-- Sayfa açıklamasını yapıyoruz -->
-    <meta name="description" content="Faktöriyel hesaplama aracıyla n! değerini anında bulun. Büyük sayılar için hızlı, doğru ve ücretsiz sonuçlar.">    
+  <!-- Sayfa açıklamasını yapıyoruz -->
+  <meta name="description" content="Faktöriyel hesaplama ile 0!, büyük sayılar ve tüm tam sayılar için anında sonuç alın. Hızlı, doğru ve ücretsiz!">
 
-    <!--Favicon dahil ediyoruz-->
-    <link rel="icon" type="image/png" sizes="32x32" href="/src/assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/src/assets/icons/favicon-16x16.png">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <!---->
+  <!--Favicon dahil ediyoruz-->
+  <link rel="icon" type="image/png" sizes="32x32" href="/src/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/src/assets/icons/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!---->
 
-    <!-- Fontu dahil ediyoruz.-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <!---->
+  <!-- Fontu dahil ediyoruz.-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <!---->
 
-    <link rel="stylesheet" href="/src/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
 
-    <title>Faktöriyel Hesaplama - Hesaplayıcım</title>
+  <link rel="stylesheet" href="/src/css/styles.css">
+
+  <title>Faktöriyel Hesaplama - Hesaplayıcım</title>
     
 </head>
+
 <body>
 
 <header>
@@ -227,80 +231,34 @@
         </div>
 
         <div class="about">
-          <h3>Yüzde Hesaplama Hakkında</h3>
-          <p>
-            Yüzde hesaplama, günlük hayatın en sık ihtiyaç duyulan matematik işlemlerinden biridir. Markette indirimli ürün alırken, maaş zammı hesaplarken ya da sınav notunuzu değerlendirirken yüzde hesabına başvurursunuz.
-          </p>
+          <h3>Faktöriyel Hesaplama Hakkında</h3>
+          <p>Faktöriyel, bir doğal sayıdan 1'e kadar olan tüm pozitif tam sayıların çarpımının tanımıdır. Matematiğin en temel kavramlarından biri olan faktöriyel; olasılık hesaplarında, kombinasyon ve permütasyon problemlerinde sıklıkla kullanılır.</p>
 
-          <h4>Temel Yüzde Formülü</h4>
-          <p>
-            Bir sayının yüzdesini bulmak için şu formülü kullanabilirsiniz:
-          </p>
-          <pre><code>Yüzde (%) = (Parça ÷ Bütün) × 100
-Sonuç = (Yüzde ÷ 100) × Sayı</code></pre>
+          <h4>Faktöriyel Nedir ve Nasıl Hesaplanır?</h4>
+          <p>n bir doğal sayı olmak üzere n! olarak gösterilen faktöriyel şu formül ile hesaplanır:</p>
+          <pre><code>n! = n x (n-1) x (n-2) x ... x 2 x 1</code></pre>
 
-          <h4>Yüzde İndirim Hesaplama</h4>
-          <p>
-            Bir ürünün indirimli fiyatını bulmak için orijinal fiyatı indirim oranıyla çarpıp 100'e bölün, çıkan değeri orijinal fiyattan çıkarın.
-          </p>
-          <pre><code>İndirim Tutarı = Fiyat × (İndirim Oranı / 100)
-İndirimli Fiyat = Fiyat - İndirim Tutarı</code></pre>
-          <p><strong>Örnek:</strong> 1.500 TL fiyatlı üründe %30 indirim → 450 TL indirim → <strong>1.050 TL</strong></p>
-
-          <h4>Yüzde Artış Hesaplama</h4>
-          <p>
-            Fiyat, maaş veya herhangi bir değer artışını hesaplamak için:
-          </p>
-          <pre><code>Yeni Değer = Eski Değer × (1 + Artış Oranı / 100)</code></pre>
-          <p><strong>Örnek:</strong> 20.000 TL maaşa %15 zam → Yeni maaş <strong>23.000 TL</strong></p>
-
-          <h4>KDV Hesaplama</h4>
-          <p>
-            Türkiye'de %20 KDV oranı için KDV dahil fiyat şöyle hesaplanır:
-          </p>
-          <pre><code>KDV Dahil Fiyat = Net Fiyat × 1,20</code></pre>
-          <p><strong>Örnek:</strong> 500 TL net fiyat → KDV dahil <strong>600 TL</strong></p>
-
-          <h4>Hızlı Hesaplama İpuçları</h4>
+          <h4>Örnek Hesaplamalar</h4>
           <ul>
-            <li><strong>%10</strong> → Sayıyı 10'a böl</li>
-            <li><strong>%25</strong> → Sayıyı 4'e böl</li>
-            <li><strong>%50</strong> → Sayıyı 2'ye böl</li>
-            <li><strong>%15</strong> → %10 + %5 topla</li>
+            <li><strong>5!</strong> = 5 x 4 x 3 x 2 x 1 = 120</li>
+            <li><strong>4!</strong> = 4 x 3 x 2 x 1 = 24</li>
+            <li><strong>1!</strong> = 1</li>
+            <li><strong>0!</strong> = 1</li>
           </ul>
 
-          <h4>Dikkat Edilmesi Gereken Nokta</h4>
-          <p>
-            Yüzde artış ve yüzde azalış simetrik değildir. %50 artıştan sonra %50 azalış sizi başlangıç noktasına geri götürmez: 100 TL → +%50 → 150 TL → -%50 → 75 TL.
-          </p>
+          <h4>0! Neden 1?</h4>
+          <p>Gelelim faktöriyelin en can alıcı ve problem çıkartan kısmına: 0!</p>
+          <p>Aslında bunun tek bir ispatı yerine bir çok ispatı vardır. Biz bunlardan 2 tanesine değineceğiz.</p>
+
+          <p><strong>1- Boş Çarpım İlkesi:</strong> Matematikte hiçbir sayıyı çarpmadığımızda, sonucumuz çarpmanın etkisiz elemanı 1 olarak kabul edilir. Nasıl ki hiçbir sayıyı toplamadığımızda sonuç 0 oluyorsa çarpmadığımızda da sonuç 1'e eşittir.</p>
+
+          <p><strong>2- Yinelemeli İlişki:</strong> Faktöriyelin temel kuralı şudur:</p>
+          <pre><code id="formul"></code></pre>
+          <p>Eğer biz bu kuralı 0! için uygularsak:</p>
+          <pre><code id="formul2"></code></pre>
+          <p>Görüldüğü üzere 0! = 0 olsaydı matematiksel bir çıkmaz meydana gelirdi.</p>
         </div>
-           
-      </div>
 
-      <div class="sidebar">
-          <div class="sidebar__header">
-              <span>Sıkça Sorulan Sorular</span>
-          </div>
-
-          <ul class="sidebar__list">
-              <li class="sidebar__item">
-                  <details>
-                      <summary>Hesaplamalar ne kadar doğru?</summary>
-                      <div class="sidebar__content">
-                          Hesaplamalar matematiksel formüllere dayalıdır ve ortalama değerler üzerinden çalışır.
-                      </div>
-                  </details>
-              </li>
-
-              <li class="sidebar__item">
-                  <details>
-                      <summary>0! neden 1’e eşittir?</summary>
-                      <div class="sidebar__content">
-                          Faktöriyel tanımı gereği 0! = 1 kabul edilir çünkü çarpımın etkisiz elemanıdır.
-                      </div>
-                  </details>
-              </li>
-          </ul>
       </div>
 
     </main>
@@ -332,5 +290,9 @@ Sonuç = (Yüzde ÷ 100) × Sayı</code></pre>
     
     <script type="module" src="/src/js/index.js"></script>
     <script src="/src/js/math/faktoriyel.js"></script>
+    <script>
+      katex.render("n! = \\dfrac{(n+1)!}{n+1}", document.getElementById("formul"));
+      katex.render("0! = \\dfrac{(0+1)!}{0+1} = \\dfrac{1!}{1} = 1", document.getElementById("formul2"));
+    </script>
 </body>
 </html>

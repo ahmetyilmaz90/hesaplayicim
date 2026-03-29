@@ -46,8 +46,6 @@ main {
     flex-direction: column;
 }
 
-
-
 /*FOOTER*/
 
 footer {
@@ -63,7 +61,7 @@ footer {
 }
 
 .footer-inner {
-    max-width: 1200px;
+    max-width: 700px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -80,7 +78,7 @@ footer ul {
 }
 
 footer a {
-    font-size: 32px;
+    font-size: 13px;
     color: var(--HC-natural-color-200);
     transition: color 0.3s ease;
 }
@@ -115,7 +113,7 @@ footer #mail-addres:hover {
 
 
 .copyright {
-    font-size: 24px;
+    font-size: 13px;
     color: var(--HC-natural-color-200);
 }
 
@@ -131,14 +129,7 @@ footer #mail-addres:hover {
     vertical-align: middle;
 }
 
-.social-media-icons {
-    display: flex;
-    gap: 15px;
-}
-
-@media (max-width: 572px){
-    .social-media-icons img {
-        width: 50px;
-        height: 50px;
-    }
+.github-icon {
+    width: 40px;
+    height: auto;
 }
