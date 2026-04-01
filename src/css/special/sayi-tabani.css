@@ -55,3 +55,7 @@
   min-width: 90px;
   text-align: center;
 }
+
+#box {
+  width:100px;height:100px;background:#ff0000;border-radius:8px;
+}
