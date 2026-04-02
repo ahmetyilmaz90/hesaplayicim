@@ -50,17 +50,14 @@ input::placeholder {
     font-size: 24px;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
     label, #result-group {
         font-size: 16px;
     }
 
     output {
-        padding: 8px 10px;
         font-size: 16px;
-        min-height: 100px;
     }
-
     input, select, textarea {
         font-size: 16px;
     }
@@ -70,6 +67,29 @@ input::placeholder {
 
     input::placeholder {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    label, #result-group {
+        font-size: 14px;
+    }
+
+    output {
+        padding: 8px 10px;
+        font-size: 14px;
+        min-height: 100px;
+    }
+
+    input, select, textarea {
+        font-size: 14px;
+    }
+    textarea {
+        height: 100px;
+    }
+
+    input::placeholder {
+        font-size: 14px;
     }
 }
 

@@ -10,6 +10,20 @@
     0 8px 32px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
   transition: border-color 0.25s, box-shadow 0.25s;
+  max-width: 700px;
+}
+
+@media (max-width: 992px) {
+    .about {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about {
+        padding: 10px;
+        max-width: 300px;
+    }
 }
 
 .about:hover {

@@ -78,7 +78,7 @@ footer ul {
 }
 
 footer a {
-    font-size: 13px;
+    font-size: 16px;
     color: var(--HC-natural-color-200);
     transition: color 0.3s ease;
 }
@@ -111,6 +111,10 @@ footer #mail-addres:hover {
     margin-top: 20px;
 }
 
+.github-icon {
+    width: 50px;
+    height: auto;
+}
 
 .copyright {
     font-size: 13px;
@@ -119,7 +123,10 @@ footer #mail-addres:hover {
 
 @media (max-width: 992px) {
     .copyright {
-        font-size: 16px;
+        font-size: 8px;
+    }
+    .github-icon {
+        width: 25px;
     }
 }
 
@@ -127,9 +134,4 @@ footer #mail-addres:hover {
     content: "© ";
     color: var(--HC-secondary-color-500);
     vertical-align: middle;
-}
-
-.github-icon {
-    width: 40px;
-    height: auto;
 }
