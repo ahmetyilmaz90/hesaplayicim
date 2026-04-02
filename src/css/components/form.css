@@ -2,6 +2,7 @@ label, #result-group {
     font-size: 24px;
     color: var(--HC-natural-color-100);
     font-weight: bolder;
+    white-space: nowrap;
 }
 
 input, select, textarea {
