@@ -277,6 +277,22 @@ footer #mail-addres:hover {
     vertical-align: middle;
 }
 
+footer .logo {
+    width: 70px;
+    opacity: 0.5;
+}
+
+/*#logo responsivite*/
+@media (max-width: 992px) {
+    .logo {
+        width: 230px;
+    }
+
+    footer .logo {
+        width: 35px;
+    }
+}
+
 /* ==================== UTILITIES ==================== */
 .center-text { text-align: center; }
 
@@ -335,7 +351,7 @@ footer #mail-addres:hover {
 }
 
 .nav-trigger img {
-    width: 32px; /* 32 biraz büyüktü */
+    width: 32px;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
