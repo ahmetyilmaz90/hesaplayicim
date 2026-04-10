@@ -18,15 +18,14 @@
   });
 </script>
 
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Gereçk sayfa urlsini tarayıcıya tanıtmak için-->
-    <link rel="canonical" href="https://hesaplayicim.com/geometri/hipotenus-hesaplama">
+    <link rel="canonical" href="https://hesaplayicim.com/matematik/ebob-ekok-hesaplama">
 
     <!-- Sayfa açıklamasını yapıyoruz -->
-    <meta name="description" content="Hipotenüs hesaplama aracıyla dik üçgende kenar uzunluğu veya hipotenüsü kolayca bulun.">
+    <meta name="description" content="EBOB ve EKOK hesaplama aracı. İki veya daha fazla sayının en büyük ortak bölenini ve en küçük ortak katını anında hesaplayın. Ücretsiz, hızlı ve kolay kullanım.">
 
     <!--Favicon dahil ediyoruz-->
     <link rel="icon" type="image/png" sizes="32x32" href="/src/assets/icons/favicon-32x32.png">
@@ -34,11 +33,10 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <!---->
 
-
-
     <link rel="stylesheet" href="/src/css/styles.css">
 
-    <title>Hipotenüs Hesaplama - Hesaplayıcım</title>
+    <title>EBOB / EKOK Hesaplama - Hesaplayıcım</title>
+
 </head>
 <body>
 
@@ -196,49 +194,22 @@
     <main>
       <div class="main">
         <div class="flex flex-col gap-30">
-            <h1 class="center-text">Hipotenüs Hesaplama</h1>
-            <h2 class="center-text">Geometri</h2>
+            <h1 class="center-text">EBOB / EKOK Hesaplama</h1>
+            <h2 class="center-text">Matematik</h2>
         </div>
 
-        <div class="calculator-container" >
-            <form id="hipotenus-hesaplama">
+        <div class="calculator-container">
+            <form id="ebob-ekok-hesaplama"> 
 
                 <div class="flex flex-col gap-30">
                     <div class="flex flex-col gap-30">
-                        <div class="flex flex-row justify-center items-center gap-30 stack-mobile">
-                            <div class="flex flex-col flex-1 gap-5">
-                                <label for="methot">İşlem Seçiniz</label>
-                                <select id="methot">
-                                    <option value="hipotenus-hesapla">Hipotenüs Hesapla</option>
-                                    <option value="kenar-hesapla">Kenar Hesapla</option>
-                                </select>
-                            </div>
-
-                            <div class="flex flex-col flex-1 gap-5">
-                                <label for="cikti-bicimi">Sonuç Biçimi</label>
-                                <select id="cikti-bicimi">
-                                    <option value="gercek">Gerçek Sonuç</option>
-                                    <option value="karekok">Kareköklü Sonuç</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-row justify-center items-center gap-30 stack-mobile">
-                            <div class="flex flex-col flex-1 gap-5">
-                                <label for="kenar1">1.Kenar</label>
-                                <input min="0" placeholder="1.Kenar uzunluğu giriniz." id="kenar1" type="number" required>
-                            </div>
-                            <div class="flex flex-col flex-1 gap-5">
-                                <label for="kenar2-hipotenus">2.Kenar</label>
-                                <input min="0" placeholder="2.Kenar uzunluğu giriniz." id="kenar2-hipotenus" type="number" required>
-                            </div>
-                        </div>
+                        <textarea placeholder="Sayılarınızı aralarında boşluk bırakarak giriniz." id="data-area" required></textarea>
                     </div>
 
                     <div class="flex flex-col gap-30">
                         <div class="flex flex-row justify-center items-center gap-30" id="result-btns">
-                            <button type="submit" id="result-btn" class="btn btn--accent">Hesapla</button>
-                            <button type="button" id="reset-btn" class="btn btn--outline">Sıfırla</button>
+                            <button id="result-btn" type="submit" class="btn btn--accent">Hesapla</button>
+                            <button id="reset-btn" type="button" class="btn btn--outline">Sıfırla</button>                            
                         </div>
                     </div>
 
@@ -250,15 +221,55 @@
                         <output id="result"></output>
                     </div>
                 </div>
-
+                
             </form>
         </div>
 
+      <div class="about">
+        <h3>EBOB ve EKOK Hesaplama Hakkında</h3>
+        <p>
+EBOB ve EKOK, sayılar arasındaki ortak bölenleri ve katları bulmak için kullanılan temel matematik kavramlarıdır.
+        </p>
 
+        <h4>EBOB Nedir?</h4>
+        <p>
+EBOB (En Büyük Ortak Bölen), iki ya da daha fazla sayıyı tam olarak bölebilen en büyük sayıdır. İngilizce'de GCD (Greatest Common Divisor) olarak geçer. 
+       </p>
+        <p><strong>Örnek: </strong>12 ve 18'in ortak bölenleri 1, 2, 3 ve 6'dır. Bunların en büyüğü 6 olduğundan EBOB(12, 18) = 6'dır.</p>
+
+
+        <h4>EKOK Nedir?</h4>
+        <p>
+EKOK (En Küçük Ortak Kat), iki ya da daha fazla sayının ortak katları arasındaki en küçük sayıdır. İngilizce'de LCM (Least Common Multiple) olarak geçer.
+        </p>
+        <p><strong>Örnek: </strong>4 ve 6'nın ortak katları 12, 24, 36... olduğundan EKOK(4, 6) = 12'dir.</p>
+
+        <h4>EBOB ve EKOK Nasıl Hesaplanır?</h4>
+        <p>EBOB ve EKOK hesaplamak için önce sayılar yan yana yazılır. Daha sonra asal sayılara bölmeye başlanılır. Bu işleme sayılar 1 kalana kadar devam edilir.</p>
+        <p><strong>EKOK: </strong>Sağdaki tüm asalları alıp çarptığımızda EKOK elde ederiz. Çünkü sayıların oluştuğu her asal sayı elimizde olur.</p>
+        <p><strong>EBOB: </strong>Her sayıyı bölmüş olan asalları seçip çarptığımızda ise EBOB elde etmiş oluruz.</p>
+        <pre><code>
+48 | 36 |  2 *
+24 | 18 |  2 *
+12 |  9 |  2
+ 6 |  9 |  2
+ 3 |  9 |  3 *
+ 1 |  3 |  3
+   |  1 |
+        </code></pre>
+        <p>Örnekte "<strong>*</strong>" işaretine sahip olanlar her 2 sayıyı da bölebilenlerdir. Bu yüzden EBOB(48, 36) = 2 . 2 . 3 = 12'dir. EKOK için ise tümünü çarparız.</p>
+
+        <h4>Karşınıza Çıkacak Bir Mevzu!</h4>
+        <p>Eğer sizlere verilen sayılar "Aralarında Asal" deniyorsa. Bu iki sayının birbiriyle eşit asal çarpanları mevcut değildir.</p>
+        <pre><code>
+          3 | 7 | 3
+          1 | 7 | 7
+            | 1 |        şeklinde
+        </code></pre>
+        <p>Ve bu sebebtendir ki EBOB(3,7) = 1 ve EKOK(3,7) = 21 olur. Kısaca: EBOB(a,b) = 1,  EKOK(a,b) = a.b</p>
+      </div>
            
       </div>
-
-
 
     </main>
 
@@ -288,6 +299,6 @@
     </footer>
     
     <script type="module" src="/src/js/index.js"></script>
-    <script src="/src/js/geometry/hipotenus.js"></script>
+    <script src="/src/js/math/ebob-ekok.js"></script>
 </body>
-</html>
+</html> 
