@@ -89,8 +89,6 @@ html, body {
 }
 
 body { 
-    display: flex;
-    flex-direction: column;
     background-color: var(--HC-primary-color-500);
     font-family: "Sora", sans-serif;
     font-weight: normal;
@@ -175,16 +173,12 @@ header {
 }
 
 main {
-    display: flex;
-    flex: 1;
     margin: 50px auto;
-    gap: 50px;
 }
 
 .main {
     max-width: 700px;
     margin: 0 auto;
-    flex-direction: column;
 }
 
 /*FOOTER*/
