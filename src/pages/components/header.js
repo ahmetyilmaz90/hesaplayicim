@@ -1,3 +1,6 @@
+class HesaplayicimHeader extends HTMLElement {
+connectedCallback() {
+this.innerHTML = `
 <header>
   <div class="inner-header">
     <a href="/">
@@ -148,3 +151,11 @@
     </nav>
   </div>
 </header>
+`
+}
+}
+
+customElements.define(
+'hesaplayicim-header',
+HesaplayicimHeader
+)

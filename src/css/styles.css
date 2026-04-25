@@ -192,12 +192,12 @@ main {
 footer {
     width: 100%;
     background-color: var(--HC-primary-color-300);
-    padding: 40px 20px;
+    padding: 48px 20px 28px;
 }
 
 @media (max-width: 992px) {
     footer {
-        padding: 10px;
+        padding: 32px 16px 20px;
     }
 }
 
@@ -207,21 +207,93 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 0;
 }
 
-footer ul {
+/* Logo */
+footer .logo {
+    width: 52px;
+    height: auto;
+    opacity: 0.5;
+    margin-bottom: 16px;
+}
+
+/* Araç sayısı pill */
+.arac-sayisi {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    padding: 6px 16px;
+    margin-bottom: 32px;
+}
+
+.arac-sayisi__dot {
+    width: 6px;
+    height: 6px;
+    background: var(--HC-accent-color-500);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.arac-sayisi__sayi {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--HC-natural-color-300);
+}
+
+.arac-sayisi__yazi {
+    font-size: 13px;
+    color: var(--HC-natural-color-200);
+}
+
+/* Divider */
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    margin-bottom: 28px;
+}
+
+/* Legal linkler */
+#site-sartlari {
     list-style: none;
     display: flex;
-    gap: 40px;
-    padding: 10px 0;
-    border-bottom: 2px solid var(--HC-natural-color-300);
+    gap: 32px;
+    padding: 0;
+    margin: 0 0 28px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
+/* Mail */
+#mail-addres {
+    font-size: 14px;
+    color: var(--HC-accent-color-500);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 3px;
+    margin-bottom: 32px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+#mail-addres:hover {
+    color: var(--HC-accent-color-700);
+    border-color: var(--HC-accent-color-700);
+}
+
+/* Footer linkler genel */
 footer a {
-    font-size: 16px;
+    font-size: 13px;
     color: var(--HC-natural-color-200);
-    transition: color 0.3s ease;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--HC-natural-color-300);
 }
 
 @media (max-width: 992px) {
@@ -230,56 +302,60 @@ footer a {
     }
 }
 
-footer a:hover {
-    color: var(--HC-natural-color-300);
-}
-
-footer #mail-addres {
-    color: var(--HC-accent-color-500);
-    border-bottom: 2px solid var(--HC-natural-color-300);
-    padding-bottom: 5px;
-}
-
-footer #mail-addres:hover {
-    color: var(--HC-accent-color-700);
-}
-
+/* Alt kısım copyright + github */
 #footernote {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
-}
-
-.github-icon {
-    width: 50px;
-    height: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    margin-top: 0;
 }
 
 .copyright {
-    font-size: 13px;
+    font-size: 12px;
     color: var(--HC-natural-color-200);
+    opacity: 0.5;
 }
 
 @media (max-width: 992px) {
     .copyright {
-        font-size: 8px;
+        font-size: 10px;
     }
+}
+
+/* Github butonu */
+.github-link {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.github-link:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.github-icon {
+    width: 18px;
+    height: 18px;
+}
+
+@media (max-width: 992px) {
     .github-icon {
-        width: 25px;
+        width: 16px;
+        height: 16px;
     }
-}
 
-.copyright::before {
-    content: "© ";
-    color: var(--HC-secondary-color-500);
-    vertical-align: middle;
-}
-
-footer .logo {
-    width: 70px;
-    opacity: 0.5;
+    .github-link {
+        width: 28px;
+        height: 28px;
+    }
 }
 
 /*#logo responsivite*/
