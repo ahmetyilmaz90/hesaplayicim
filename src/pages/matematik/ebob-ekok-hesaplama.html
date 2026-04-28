@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ZGHWCHK493');
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZGHWCHK493');
 
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      var s = document.createElement('script');
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZGHWCHK493';
-      s.async = true;
-      document.head.appendChild(s);
-    }, 3000);
-  });
-</script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZGHWCHK493';
+        s.async = true;
+        document.head.appendChild(s);
+      }, 3000);
+    });
+  </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Gereçk sayfa urlsini tarayıcıya tanıtmak için-->
-    <link rel="canonical" href="https://hesaplayicim.com/matematik/ebob-ekok-hesaplama">
+  <!--Gereçk sayfa urlsini tarayıcıya tanıtmak için-->
+  <link rel="canonical" href="https://hesaplayicim.com/matematik/ebob-ekok-hesaplama">
 
-    <!-- Sayfa açıklamasını yapıyoruz -->
-    <meta name="description" content="EBOB ve EKOK hesaplama aracı. İki veya daha fazla sayının en büyük ortak bölenini ve en küçük ortak katını anında hesaplayın. Ücretsiz, hızlı ve kolay kullanım.">
+  <!-- Sayfa açıklamasını yapıyoruz -->
+  <meta name="description" content="EBOB ve EKOK hesaplama aracı. İki veya daha fazla sayının en büyük ortak bölenini ve en küçük ortak katını anında hesaplayın. Ücretsiz, hızlı ve kolay kullanım.">
 
-    <!--Favicon dahil ediyoruz-->
-    <link rel="icon" type="image/png" sizes="32x32" href="/src/assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/src/assets/icons/favicon-16x16.png">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <!---->
+  <!--Favicon dahil ediyoruz-->
+  <link rel="icon" type="image/png" sizes="32x32" href="/src/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/src/assets/icons/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!---->
 
-    <!--Components-->
-    <script src="/src/pages/components/header.js" defer></script>
-    <script src="/src/pages/components/footer.js" defer></script>
+  <!--Components-->
+  <script src="/src/pages/components/header.js" defer></script>
+  <script src="/src/pages/components/footer.js" defer></script>
 
-    <link rel="stylesheet" href="/src/css/styles.css">
+  <link rel="stylesheet" href="/src/css/styles.css">
 
-    <title>EBOB / EKOK Hesaplama - Hesaplayıcım</title>
+  <title>EBOB EKOK Hesaplama - Ortak Bölen Hesapla | Hesaplayıcım</title>
 
 </head>
+
 <body>
 
   <hesaplayicim-header></hesaplayicim-header>
@@ -54,85 +55,78 @@
         </div>
 
         <div class="calculator-container">
-            <form id="ebob-ekok-hesaplama"> 
+          <form id="ebob-ekok-hesaplama"> 
+            <div class="flex flex-col gap-30">
+              <div class="flex flex-col gap-30">
+                <textarea placeholder="Sayılarınızı aralarında boşluk bırakarak giriniz." id="data-area" required></textarea>
+              </div>
 
-                <div class="flex flex-col gap-30">
-                    <div class="flex flex-col gap-30">
-                        <textarea placeholder="Sayılarınızı aralarında boşluk bırakarak giriniz." id="data-area" required></textarea>
-                    </div>
-
-                    <div class="flex flex-col gap-30">
-                        <div class="flex flex-row justify-center items-center gap-30" id="result-btns">
-                            <button id="result-btn" type="submit" class="btn btn--accent">Hesapla</button>
-                            <button id="reset-btn" type="button" class="btn btn--outline">Sıfırla</button>                            
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col gap-30" id="result-area">
-                        <div class="flex flex-row justify-center items-center gap-30" id="result-group">
-                            <span>Sonuç</span>
-                            <button title="Kopyala" type="button" class="btn btn--copy"><img src="/src/assets/icons/solar_copy-bold.svg" alt="kopyalama-butonu"></button>
-                        </div>
-                        <output id="result"></output>
-                    </div>
+              <div class="flex flex-col gap-30">
+                <div class="flex flex-row justify-center items-center gap-30" id="result-btns">
+                  <button id="result-btn" type="submit" class="btn btn--accent">Hesapla</button>
+                  <button id="reset-btn" type="button" class="btn btn--outline">Sıfırla</button>                            
                 </div>
-                
-            </form>
+              </div>
+
+              <div class="flex flex-col gap-30" id="result-area">
+                <div class="flex flex-row justify-center items-center gap-30" id="result-group">
+                  <span>Sonuç</span>
+                  <button title="Kopyala" type="button" class="btn btn--copy"><img src="/src/assets/icons/solar_copy-bold.svg" alt="kopyalama-butonu"></button>
+                </div>
+                <output id="result"></output>
+              </div>
+            </div>
+          </form>
         </div>
 
-      <div class="about">
-        <h3>EBOB ve EKOK Hesaplama Hakkında</h3>
-        <p>
-EBOB ve EKOK, sayılar arasındaki ortak bölenleri ve katları bulmak için kullanılan temel matematik kavramlarıdır.
-        </p>
+        <div class="about">
+          <h3>EBOB ve EKOK Hesaplama Hakkında</h3>
+          <p>EBOB ve EKOK, sayılar arasındaki ortak bölenleri ve katları bulmak için kullanılan temel matematik kavramlarıdır.</p>
 
-        <h4>EBOB Nedir?</h4>
-        <p>
-EBOB (En Büyük Ortak Bölen), iki ya da daha fazla sayıyı tam olarak bölebilen en büyük sayıdır. İngilizce'de GCD (Greatest Common Divisor) olarak geçer. 
-       </p>
-        <p><strong>Örnek: </strong>12 ve 18'in ortak bölenleri 1, 2, 3 ve 6'dır. Bunların en büyüğü 6 olduğundan EBOB(12, 18) = 6'dır.</p>
+          <h4>EBOB Nedir?</h4>
+          <p>EBOB (En Büyük Ortak Bölen), iki ya da daha fazla sayıyı tam olarak bölebilen en büyük sayıdır. İngilizce'de GCD (Greatest Common Divisor) olarak geçer. </p>
+          <p><strong>Örnek: </strong>12 ve 18'in ortak bölenleri 1, 2, 3 ve 6'dır. Bunların en büyüğü 6 olduğundan EBOB(12, 18) = 6'dır.</p>
 
+          <h4>EKOK Nedir?</h4>
+          <p>EKOK (En Küçük Ortak Kat), iki ya da daha fazla sayının ortak katları arasındaki en küçük sayıdır. İngilizce'de LCM (Least Common Multiple) olarak geçer.</p>
+          <p><strong>Örnek: </strong>4 ve 6'nın ortak katları 12, 24, 36... olduğundan EKOK(4, 6) = 12'dir.</p>
 
-        <h4>EKOK Nedir?</h4>
-        <p>
-EKOK (En Küçük Ortak Kat), iki ya da daha fazla sayının ortak katları arasındaki en küçük sayıdır. İngilizce'de LCM (Least Common Multiple) olarak geçer.
-        </p>
-        <p><strong>Örnek: </strong>4 ve 6'nın ortak katları 12, 24, 36... olduğundan EKOK(4, 6) = 12'dir.</p>
+          <h4>EBOB ve EKOK Nasıl Hesaplanır?</h4>
+          <p>EBOB ve EKOK hesaplamak için önce sayılar yan yana yazılır. Daha sonra asal sayılara bölmeye başlanılır. Bu işleme sayılar 1 kalana kadar devam edilir.</p>
+          <p><strong>EKOK: </strong>Sağdaki tüm asalları alıp çarptığımızda EKOK elde ederiz. Çünkü sayıların oluştuğu her asal sayı elimizde olur.</p>
+          <p><strong>EBOB: </strong>Her sayıyı bölmüş olan asalları seçip çarptığımızda ise EBOB elde etmiş oluruz.</p>
+          <pre><code>
+            48 | 36 |  2 *
+            24 | 18 |  2 *
+            12 |  9 |  2
+            6 |  9 |  2
+            3 |  9 |  3 *
+            1 |  3 |  3
+              |  1 |
+          </code></pre>
+          <p>Örnekte "<strong>*</strong>" işaretine sahip olanlar her 2 sayıyı da bölebilenlerdir. Bu yüzden EBOB(48, 36) = 2 . 2 . 3 = 12'dir. EKOK için ise tümünü çarparız.</p>
 
-        <h4>EBOB ve EKOK Nasıl Hesaplanır?</h4>
-        <p>EBOB ve EKOK hesaplamak için önce sayılar yan yana yazılır. Daha sonra asal sayılara bölmeye başlanılır. Bu işleme sayılar 1 kalana kadar devam edilir.</p>
-        <p><strong>EKOK: </strong>Sağdaki tüm asalları alıp çarptığımızda EKOK elde ederiz. Çünkü sayıların oluştuğu her asal sayı elimizde olur.</p>
-        <p><strong>EBOB: </strong>Her sayıyı bölmüş olan asalları seçip çarptığımızda ise EBOB elde etmiş oluruz.</p>
-        <pre><code>
-48 | 36 |  2 *
-24 | 18 |  2 *
-12 |  9 |  2
- 6 |  9 |  2
- 3 |  9 |  3 *
- 1 |  3 |  3
-   |  1 |
-        </code></pre>
-        <p>Örnekte "<strong>*</strong>" işaretine sahip olanlar her 2 sayıyı da bölebilenlerdir. Bu yüzden EBOB(48, 36) = 2 . 2 . 3 = 12'dir. EKOK için ise tümünü çarparız.</p>
+          <h4>Karşınıza Çıkacak Bir Mevzu!</h4>
+          <p>Eğer sizlere verilen sayılar "Aralarında Asal" deniyorsa. Bu iki sayının birbiriyle eşit asal çarpanları mevcut değildir.</p>
+          <pre><code>
+            3 | 7 | 3
+            1 | 7 | 7
+              | 1 |        şeklinde
+          </code></pre>
+          <p>Ve bu sebebtendir ki EBOB(3,7) = 1 ve EKOK(3,7) = 21 olur. Kısaca: EBOB(a,b) = 1,  EKOK(a,b) = a.b</p>
 
-        <h4>Karşınıza Çıkacak Bir Mevzu!</h4>
-        <p>Eğer sizlere verilen sayılar "Aralarında Asal" deniyorsa. Bu iki sayının birbiriyle eşit asal çarpanları mevcut değildir.</p>
-        <pre><code>
-          3 | 7 | 3
-          1 | 7 | 7
-            | 1 |        şeklinde
-        </code></pre>
-        <p>Ve bu sebebtendir ki EBOB(3,7) = 1 ve EKOK(3,7) = 21 olur. Kısaca: EBOB(a,b) = 1,  EKOK(a,b) = a.b</p>
-        <div class="sources">
-          <p class="sources-title">Kaynakça</p>
-          <ol>
-            <li><a href="https://www.sabah.com.tr/egitim/ebob-ekok-nedir-ebob-ve-ekok-hesaplama-konu-anlatimi-e1-5500237" target="_blank" rel="noopener noreferrer">EBOB EKOK Nedir? Hesaplama Konu Anlatımı – Sabah Eğitim</a></li>
-            <li><a href="https://matematikciler.com/ebob-ekok-konu-anlatimi/" target="_blank" rel="noopener noreferrer">EBOB – EKOK Konu Anlatımı – Matematikciler.com</a></li>
-            <li><a href="https://www.derspresso.com.tr/matematik/bolen-kat/ebob-ekok-ozellik" target="_blank" rel="noopener noreferrer">EBOB ve EKOK Ortak Özellikleri – Derspresso</a></li>
-            <li><a href="https://www.dopinghafiza.com/ders/tyt-matematik/ebob-ekok" target="_blank" rel="noopener noreferrer">EBOB – EKOK | TYT Matematik – Doping Hafıza</a></li>
-            <li><a href="https://zralpanoo.meb.k12.tr/meb_iys_dosyalar/63/12/758604/dosyalar/2020_04/13154511_ebob_ekok_ve_aralarYnda_asal_sayYlar.pdf" target="_blank" rel="noopener noreferrer">EBOB, EKOK ve Aralarında Asal Sayılar – MEB</a></li>
-          </ol>
+          <div class="sources">
+            <p class="sources-title">Kaynakça</p>
+            <ol>
+              <li><a href="https://www.sabah.com.tr/egitim/ebob-ekok-nedir-ebob-ve-ekok-hesaplama-konu-anlatimi-e1-5500237" target="_blank" rel="noopener noreferrer">EBOB EKOK Nedir? Hesaplama Konu Anlatımı – Sabah Eğitim</a></li>
+              <li><a href="https://matematikciler.com/ebob-ekok-konu-anlatimi/" target="_blank" rel="noopener noreferrer">EBOB – EKOK Konu Anlatımı – Matematikciler.com</a></li>
+              <li><a href="https://www.derspresso.com.tr/matematik/bolen-kat/ebob-ekok-ozellik" target="_blank" rel="noopener noreferrer">EBOB ve EKOK Ortak Özellikleri – Derspresso</a></li>
+              <li><a href="https://www.dopinghafiza.com/ders/tyt-matematik/ebob-ekok" target="_blank" rel="noopener noreferrer">EBOB – EKOK | TYT Matematik – Doping Hafıza</a></li>
+              <li><a href="https://zralpanoo.meb.k12.tr/meb_iys_dosyalar/63/12/758604/dosyalar/2020_04/13154511_ebob_ekok_ve_aralarYnda_asal_sayYlar.pdf" target="_blank" rel="noopener noreferrer">EBOB, EKOK ve Aralarında Asal Sayılar – MEB</a></li>
+            </ol>
+          </div>
+
         </div>
-      </div>
                 
       </div>
 

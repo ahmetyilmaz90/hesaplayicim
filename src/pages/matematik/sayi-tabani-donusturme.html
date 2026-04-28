@@ -1,209 +1,207 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ZGHWCHK493');
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZGHWCHK493');
 
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      var s = document.createElement('script');
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZGHWCHK493';
-      s.async = true;
-      document.head.appendChild(s);
-    }, 3000);
-  });
-</script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZGHWCHK493';
+        s.async = true;
+        document.head.appendChild(s);
+      }, 3000);
+    });
+  </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Gereçk sayfa urlsini tarayıcıya tanıtmak için-->
-    <link rel="canonical" href="https://hesaplayicim.com/matematik/sayi-tabani-donusturme">
+  <!--Gereçk sayfa urlsini tarayıcıya tanıtmak için-->
+  <link rel="canonical" href="https://hesaplayicim.com/matematik/sayi-tabani-donusturme">
 
-    <!-- Sayfa açıklamasını yapıyoruz -->
-    <meta name="description" content="Sayı tabanı dönüştürme aracıyla ikilik, sekizlik, onluk ve onaltılık tabanlar arasında hızlı dönüşüm yapın.">
+  <!-- Sayfa açıklamasını yapıyoruz -->
+  <meta name="description" content="Sayı tabanı dönüştürme aracıyla ikilik, sekizlik, onluk ve onaltılık tabanlar arasında hızlı dönüşüm yapın.">
 
-    <!--Favicon dahil ediyoruz-->
-    <link rel="icon" type="image/png" sizes="32x32" href="/src/assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/src/assets/icons/favicon-16x16.png">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <!---->
+  <!--Favicon dahil ediyoruz-->
+  <link rel="icon" type="image/png" sizes="32x32" href="/src/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/src/assets/icons/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!---->
 
-    <!--Components-->
-    <script src="/src/pages/components/header.js" defer></script>
-    <script src="/src/pages/components/footer.js" defer></script>
+  <!--Components-->
+  <script src="/src/pages/components/header.js" defer></script>
+  <script src="/src/pages/components/footer.js" defer></script>
 
-    <!--Özel sayfa stilleri-->
-    <style>
-.color-preview {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  background: var(--HC-primary-color-500);
-  border-radius: 12px;
-  padding: 24px;
-  margin: 16px 0;
-}
+  <!--Özel sayfa stilleri-->
+  <style>
+    .color-preview {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: var(--HC-primary-color-500);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 16px 0;
+    }
 
-.sliders {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  flex: 1;
-}
-
-.sliders label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--HC-natural-color-100);
-}
-
-.sliders input[type="range"] {
-  flex: 1;
-  height: 6px;
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
-}
-
-.sliders span {
-  min-width: 30px;
-  text-align: right;
-  font-size: 13px;
-  color: var(--HC-natural-color-100);
-}
-
-#hex {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--HC-natural-color-100);
-  margin: 0;
-  min-width: 90px;
-  text-align: center;
-}
-
-#box {
-  width: 100px;
-  height: 100px;
-  background: #ff0000;
-  border-radius: 8px;
-  flex-shrink: 0;
-  transition: background 0.2s;
-}
-
-@media (max-width: 480px) {
-  .color-preview {
+    .sliders {
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
-  }
+    gap: 12px;
+    flex: 1;
+    }
 
-  #box {
-    width: 100%;
-    height: 80px;
-  }
+    .sliders label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--HC-natural-color-100);
+    }
 
-  #hex {
+    .sliders input[type="range"] {
+    flex: 1;
+    height: 6px;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    }
+
+    .sliders span {
+    min-width: 30px;
+    text-align: right;
+    font-size: 13px;
+    color: var(--HC-natural-color-100);
+    }
+
+    #hex {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--HC-natural-color-100);
+    margin: 0;
+    min-width: 90px;
     text-align: center;
-  }
-}
-    </style>
-    <link rel="stylesheet" href="/src/css/styles.css">
-    
+    }
 
-    <title>Sayı Tabanı Çevirme - Hesaplayıcım</title>
+    #box {
+    width: 100px;
+    height: 100px;
+    background: #ff0000;
+    border-radius: 8px;
+    flex-shrink: 0;
+    transition: background 0.2s;
+    }
+
+    @media (max-width: 480px) {
+    .color-preview {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    #box {
+      width: 100%;
+      height: 80px;
+    }
+
+    #hex {
+      text-align: center;
+    }
+    }
+  </style>
+
+  <link rel="stylesheet" href="/src/css/styles.css">
+
+<title>Sayı Tabanı Çevirme - Binary ve Dec Dönüştürme | Hesaplayıcım</title>
 
 </head>
 <body>
 
   <hesaplayicim-header></hesaplayicim-header>
 
-    <main>
-      <div class="main">
-        <div class="flex flex-col gap-30">
-            <h1 class="center-text">Sayı Tabanı Çevirme</h1>
-            <h2 class="center-text">Matematik</h2>
-        </div>
+  <main>
+    <div class="main">
+      <div class="flex flex-col gap-30">
+        <h1 class="center-text">Sayı Tabanı Çevirme</h1>
+        <h2 class="center-text">Matematik</h2>
+      </div>
 
-        <div class="calculator-container">
-            <form id="sayi-tabani-cevirme">
-
-                <div class="flex flex-col gap-30">
-                    <div class="flex flex-col gap-30">
-                        <div class="flex flex-row justify-center items-center gap-30 stack-mobile">
-                            <div class="flex flex-col flex-1 gap-5">
-                                <label for="giris-tabani">Sayı Tabanı</label>
-                                <select id="giris-tabani">
-                                    <option value="2">İkilik (Binary)</option>
-                                    <option value="8">Sekizlik (Octal)</option>
-                                    <option value="10">Onluk (Decimal)</option>
-                                    <option value="16">Onaltılık (Hexadecimal)</option>
-                                </select>
-                            </div>
-                            <div class="flex flex-col flex-1 gap-5">
-                                <label for="cikis-tabani">Sonuç Tabanı</label>
-                                <select id="cikis-tabani">
-                                    <option value="2">İkilik (Binary)</option>
-                                    <option value="8">Sekizlik (Octal)</option>
-                                    <option value="10">Onluk (Decimal)</option>
-                                    <option value="16">Onaltılık(Hexadecimal)</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-5">
-                            <label for="sayi">Tabanı Değişecek Sayı</label>
-                            <input id="sayi" placeholder="Tabanı değişecek sayıyı giriniz." required>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col gap-30">
-                        <div class="flex flex-row justify-center items-center gap-30" id="result-btns">
-                            <button type="submit" id="result-btn" class="btn btn--accent">Hesapla</button>
-                            <button type="button" id="reset-btn" class="btn btn--outline">Sıfırla</button>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col gap-30" id="result-area">
-                        <div class="flex flex-row justify-center items-center gap-30" id="result-group">
-                            <span>Sonuç</span>
-                            <button title="Kopyala" type="button" class="btn btn--copy"><img src="/src/assets/icons/solar_copy-bold.svg" alt="kopyalama-butonu"></button>
-                        </div>
-                        <output id="result"></output>
-                    </div>
+      <div class="calculator-container">
+        <form id="sayi-tabani-cevirme">
+          <div class="flex flex-col gap-30">
+            <div class="flex flex-col gap-30">
+              <div class="flex flex-row justify-center items-center gap-30 stack-mobile">
+                <div class="flex flex-col flex-1 gap-5">
+                  <label for="giris-tabani">Sayı Tabanı</label>
+                  <select id="giris-tabani">
+                      <option value="2">İkilik (Binary)</option>
+                      <option value="8">Sekizlik (Octal)</option>
+                      <option value="10">Onluk (Decimal)</option>
+                      <option value="16">Onaltılık (Hexadecimal)</option>
+                  </select>
                 </div>
+                <div class="flex flex-col flex-1 gap-5">
+                  <label for="cikis-tabani">Sonuç Tabanı</label>
+                  <select id="cikis-tabani">
+                      <option value="2">İkilik (Binary)</option>
+                      <option value="8">Sekizlik (Octal)</option>
+                      <option value="10">Onluk (Decimal)</option>
+                      <option value="16">Onaltılık(Hexadecimal)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex flex-col gap-5">
+                <label for="sayi">Tabanı Değişecek Sayı</label>
+                <input id="sayi" placeholder="Tabanı değişecek sayıyı giriniz." required>
+              </div>
+            </div>
+            <div class="flex flex-col gap-30">
+              <div class="flex flex-row justify-center items-center gap-30" id="result-btns">
+                <button type="submit" id="result-btn" class="btn btn--accent">Hesapla</button>
+                <button type="button" id="reset-btn" class="btn btn--outline">Sıfırla</button>
+              </div>
+            </div>
+            <div class="flex flex-col gap-30" id="result-area">
+              <div class="flex flex-row justify-center items-center gap-30" id="result-group">
+                <span>Sonuç</span>
+                <button title="Kopyala" type="button" class="btn btn--copy"><img src="/src/assets/icons/solar_copy-bold.svg" alt="kopyalama-butonu"></button>
+              </div>
+              <output id="result"></output>
+            </div>
+          </div>
+        </form>
+      </div>
 
-            </form>
-        </div>
+      <div class="about">
+        <h3>Sayı Tabanı Çevirme Hakkında</h3>
+        <p>Sayı tabanı, bir sayı sisteminde kullanılan rakam sayısını ifade eder. Birler basamağı kullanılan son rakama gelince bir sonraki basamağa, yani onlar basamağına devam edilerek sayılar ifade edilir. Günlük hayatta insanlar 10 tabanını (decimal) kullanırken, bilgisayarlar 2 tabanını (binary), programcılar ise sıklıkla 8 (octal) ve 16 tabanını (hexadecimal) kullanır.</p>
 
-        <div class="about">
-          <h3>Sayı Tabanı Çevirme Hakkında</h3>
-          <p>Sayı tabanı, bir sayı sisteminde kullanılan rakam sayısını ifade eder. Birler basamağı kullanılan son rakama gelince bir sonraki basamağa, yani onlar basamağına devam edilerek sayılar ifade edilir. Günlük hayatta insanlar 10 tabanını (decimal) kullanırken, bilgisayarlar 2 tabanını (binary), programcılar ise sıklıkla 8 (octal) ve 16 tabanını (hexadecimal) kullanır.</p>
+        <h4>Yaygın Sayı Sistemleri</h4>
+        <ul>
+          <li><strong>2 Tabanı (Binary):</strong> Sadece 1 ve 0 rakamları kullanılır.</li>
+          <li><strong>8 Tabanı (Octal):</strong> 0'dan 7'ye kadar rakamlar kullanılır</li>
+          <li><strong>10 Tabanı (Decimal):</strong> Günlük hayatta kullanılan sistemdir. 0'dan 9'a kadar olan rakamlar kullanılır.</li>
+          <li><strong>16 Tabanı (Hexadecimal):</strong> 0-9 arası rakamlar ve 10-16 için A-F harfleri kullanılır.</li>
+        </ul>
 
-          <h4>Yaygın Sayı Sistemleri</h4>
-          <ul>
-            <li><strong>2 Tabanı (Binary):</strong> Sadece 1 ve 0 rakamları kullanılır.</li>
-            <li><strong>8 Tabanı (Octal):</strong> 0'dan 7'ye kadar rakamlar kullanılır</li>
-            <li><strong>10 Tabanı (Decimal):</strong> Günlük hayatta kullanılan sistemdir. 0'dan 9'a kadar olan rakamlar kullanılır.</li>
-            <li><strong>16 Tabanı (Hexadecimal):</strong> 0-9 arası rakamlar ve 10-16 için A-F harfleri kullanılır.</li>
-          </ul>
+        <h4>Sayı Sistemlerini Birbirine Çevirme</h4>
+        <p>Peki gelelim bu hesaplama aletininde konusu olan sayı tabanlarını birbirine çevirme işine. Öncelikle bize verilen sayıyı 10 tabanına daha sonra da istenilen diğer tabana çevirmek en çok tercih edilen yöntemdir.</p>
+        <p><strong>1 - Sayıyı Decimale Çevir:</strong> Her basamak, bulunduğu konumun taban kuvveti ile çarpılıp toplanır.<strong> Örnek:</strong>  </p>
+        <pre><code>1101 = (1×2³) + (1×2²) + (0×2¹) + (1×2⁰) = 8 + 4 + 0 + 1 = 13</code></pre>
+        <p><strong>2 - Decimal Sayıyı İstenilen Tabana Çevir:</strong> Bir decimal sayıyı başka bir tabana çevirmek için sayıyı hedef tabana bölmeye devam edilir, kalanlar ters sırayla okunur.<strong> Örnek:</strong></p>
+        <pre><code>
+          13 ÷ 2 = 6 kalan 1
+          6 ÷ 2 = 3 kalan 0
+          3 ÷ 2 = 1 kalan 1
+          1 ÷ 2 = 0 kalan 1
 
-          <h4>Sayı Sistemlerini Birbirine Çevirme</h4>
-          <p>Peki gelelim bu hesaplama aletininde konusu olan sayı tabanlarını birbirine çevirme işine. Öncelikle bize verilen sayıyı 10 tabanına daha sonra da istenilen diğer tabana çevirmek en çok tercih edilen yöntemdir.</p>
-          <p><strong>1 - Sayıyı Decimale Çevir:</strong> Her basamak, bulunduğu konumun taban kuvveti ile çarpılıp toplanır.<strong> Örnek:</strong>  </p>
-          <pre><code>1101 = (1×2³) + (1×2²) + (0×2¹) + (1×2⁰) = 8 + 4 + 0 + 1 = 13</code></pre>
-          <p><strong>2 - Decimal Sayıyı İstenilen Tabana Çevir:</strong> Bir decimal sayıyı başka bir tabana çevirmek için sayıyı hedef tabana bölmeye devam edilir, kalanlar ters sırayla okunur.<strong> Örnek:</strong></p>
-          <pre><code>13 ÷ 2 = 6 kalan 1
-6 ÷ 2 = 3 kalan 0
-3 ÷ 2 = 1 kalan 1
-1 ÷ 2 = 0 kalan 1
-
-Kalanlar ters okunur -> 1101</code></pre>
+          Kalanlar ters okunur -> 1101
+        </code></pre>
 
         <h4>Hexadecimal Ne İşe Yarar ?</h4>
         <p>Büyük çoğunluk internette #FFFFFF veya #000000 gibi renk kodlarını görmüştür. Bunlar aslında birer hexadecimal sayıdır. Renk kodu 6 haneli hex sayısından oluşur ve her 2 hane sırasıyla Kırmızı, Yeşil ve Mavi (RGB) kanalını temsil eder. RGB sisteminde her kanal 0 ile 255 arasında bir değer alır; 0 o rengin hiç olmadığını, 255 ise tam yoğunlukta olduğunu ifade eder.</p>
@@ -230,28 +228,28 @@ Kalanlar ters okunur -> 1101</code></pre>
             <li><a href="https://dosya.kmu.edu.tr/eemuh/userfiles/files/Laboratuvarlar/Say%C4%B1sal%20Elektronik-1/Say%C4%B1%20Sistemler%20Sunum%20Notlar%C4%B1.pdf" target="_blank" rel="noopener noreferrer">Sayı Sistemleri Sunum Notları – Karamanoğlu Mehmetbey Üniversitesi</a></li>
           </ol>
         </div>
-        </div>
-           
       </div>
-
-    </main>
-
-    <hesaplayicim-footer></hesaplayicim-footer>
     
-    <script type="module" src="/src/js/index.js"></script>
-    <script src="/src/js/math/sayi-tabani.js"></script>
-    <script>
-      function updateColor() {
-        const r = document.getElementById('r').value;
-        const g = document.getElementById('g').value;
-        const b = document.getElementById('b').value;
-        document.getElementById('rv').textContent = r;
-        document.getElementById('gv').textContent = g;
-        document.getElementById('bv').textContent = b;
-        const hex = '#' + [r,g,b].map(v => parseInt(v).toString(16).padStart(2,'0').toUpperCase()).join('');
-        document.getElementById('box').style.background = hex;
-        document.getElementById('hex').textContent = hex;
-      }
-    </script>
+    </div>
+
+  </main>
+
+  <hesaplayicim-footer></hesaplayicim-footer>
+  
+  <script type="module" src="/src/js/index.js"></script>
+  <script src="/src/js/math/sayi-tabani.js"></script>
+  <script>
+    function updateColor() {
+      const r = document.getElementById('r').value;
+      const g = document.getElementById('g').value;
+      const b = document.getElementById('b').value;
+      document.getElementById('rv').textContent = r;
+      document.getElementById('gv').textContent = g;
+      document.getElementById('bv').textContent = b;
+      const hex = '#' + [r,g,b].map(v => parseInt(v).toString(16).padStart(2,'0').toUpperCase()).join('');
+      document.getElementById('box').style.background = hex;
+      document.getElementById('hex').textContent = hex;
+    }
+  </script>
 </body>
 </html>

@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ZGHWCHK493');
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZGHWCHK493');
 
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      var s = document.createElement('script');
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZGHWCHK493';
-      s.async = true;
-      document.head.appendChild(s);
-    }, 3000);
-  });
-</script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZGHWCHK493';
+        s.async = true;
+        document.head.appendChild(s);
+      }, 3000);
+    });
+  </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +39,7 @@
 
   <link rel="stylesheet" href="/src/css/styles.css">
 
-  <title>Yüzde Hesaplama - Hesaplayıcım</title>
+  <title>Yüzde Hesaplama - İndirim, Zam ve KDV Hesapla | Hesaplayıcım</title>
 
 </head>
 
@@ -47,124 +47,114 @@
 
   <hesaplayicim-header></hesaplayicim-header>
 
-    <main>
-      <div class="main">
-        <div class="flex flex-col gap-30">
-            <h1 class="center-text">Yüzde Hesaplama</h1>
-            <h2 class="center-text">Matematik</h2>
-        </div>
-
-        <div class="calculator-container">
-            <form id="yuzde-hesaplama">
-
-                <div class="flex flex-col gap-30">
-                    <div class="flex flex-col gap-30">
-                        <div class="flex flex-col gap-5">
-                            <label for="methot">İşlem</label>
-                            <select id="methot">
-                                <option value="islem1">1.Sayı, 2.sayının yüzde kaçıdır?</option>
-                                <option value="islem2">Bir sayının yüzdesini bulma</option>
-                            </select>
-                        </div>
-                        <div class="flex flex-row justify-center items-center gap-30 stack-mobile">
-                            <div class="flex flex-col flex-1 gap-5">
-                                <label for="sayi1">1.Sayı</label>
-                                <input required placeholder="1.Sayıyı yazınız." id="sayi1" type="number" step="0.01">
-                            </div>
-                            <div class="flex flex-col flex-1 gap-5">
-                                <label for="sayi2-yuzde">2.Sayı</label>
-                                <input required id="sayi2-yuzde" type="number" placeholder="2.Sayıyı yazınız." step="0.01">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col gap-30">
-                        <div class="flex flex-row justify-center items-center gap-30" id="result-btns">
-                            <button type="submit" id="result-btn" class="btn btn--accent">Hesapla</button>
-                            <button type="button" id="reset-btn" class="btn btn--outline">Sıfırla</button>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col gap-30" id="result-area">
-                        <div class="flex flex-row justify-center items-center gap-30" id="result-group">
-                            <span>Sonuç</span>
-                            <button title="Kopyala" type="button" class="btn btn--copy"><img src="/src/assets/icons/solar_copy-bold.svg" alt="kopyalama-butonu"></button>
-                        </div>
-                        <output id="result"></output>
-                    </div>
-                </div>
-
-            </form>
-        </div>
-
-        <div class="about">
-          <h3>Yüzde Hesaplama Hakkında</h3>
-          <p>
-            Yüzde hesaplama, günlük hayatın en sık ihtiyaç duyulan matematik işlemlerinden biridir. Markette indirimli ürün alırken, maaş zammı hesaplarken ya da sınav notunuzu değerlendirirken yüzde hesabına başvurursunuz.
-          </p>
-
-          <h4>Yüzde Nasıl Hesaplanır ?</h4>
-          <p>
-            Bir sayının yüzdesini bulmak için şu formül kullanılır:
-          </p>
-          <pre><code>Yüzde (%) = (Parça ÷ Bütün) × 100
-Sonuç = (Yüzde ÷ 100) × Sayı</code></pre>
-
-          <h4>Yüzde İndirim Hesaplama</h4>
-          <p>
-            Bir ürünün indirimli fiyatını bulmak için orijinal fiyatı indirim oranıyla çarpıp 100'e bölün, çıkan değeri orijinal fiyattan çıkarın.
-          </p>
-          <pre><code>İndirim Tutarı = Fiyat × (İndirim Oranı / 100)
-İndirimli Fiyat = Fiyat - İndirim Tutarı</code></pre>
-          <p><strong>Örnek:</strong> 1.500 TL fiyatlı üründe %30 indirim → 450 TL indirim → <strong>1.050 TL</strong></p>
-
-          <h4>Yüzde Artış Hesaplama</h4>
-          <p>
-            Fiyat, maaş veya herhangi bir değer artışını hesaplamak için:
-          </p>
-          <pre><code>Yeni Değer = Eski Değer × (1 + Artış Oranı / 100)</code></pre>
-          <p><strong>Örnek:</strong> 20.000 TL maaşa %15 zam → Yeni maaş <strong>23.000 TL</strong></p>
-
-          <h4>KDV Hesaplama</h4>
-          <p>
-            Türkiye'de %20 KDV oranı için KDV dahil fiyat şöyle hesaplanır:
-          </p>
-          <pre><code>KDV Dahil Fiyat = Net Fiyat × 1,20</code></pre>
-          <p><strong>Örnek:</strong> 500 TL net fiyat → KDV dahil <strong>600 TL</strong></p>
-
-          <h4>Hızlı Hesaplama İpuçları</h4>
-          <ul>
-            <li><strong>%10</strong> → Sayıyı 10'a böl</li>
-            <li><strong>%25</strong> → Sayıyı 4'e böl</li>
-            <li><strong>%50</strong> → Sayıyı 2'ye böl</li>
-            <li><strong>%15</strong> → %10 + %5 topla</li>
-          </ul>
-
-          <h4>Dikkat Edilmesi Gereken Nokta</h4>
-          <p>
-            Yüzde artış ve yüzde azalış simetrik değildir. %50 artıştan sonra %50 azalış sizi başlangıç noktasına geri götürmez: 100 TL → +%50 → 150 TL → -%50 → 75 TL.
-          </p>
-
-          <div class="sources">
-            <p class="sources-title">Kaynakça</p>
-            <ol>
-              <li><a href="https://vidoport.com/blog/yuzde-hesaplama-ve-yuzdelik-degisimlerin-puf-noktalarini-kesfedin" target="_blank" rel="noopener noreferrer">Yüzde Hesaplama: Formül ve Puf Noktaları – Vidoport</a></li>
-              <li><a href="https://hesapmatik.com/hesapla/yuzde-hesaplama/" target="_blank" rel="noopener noreferrer">Yüzde Hesaplama: Oran, Artış ve Azalış – HesapMatik</a></li>
-              <li><a href="https://kdv.hesaplama.net/" target="_blank" rel="noopener noreferrer">KDV Hesaplama Formülü – Hesaplama.net</a></li>
-              <li><a href="https://tamliste.tr/yuzde-indirim-zam-hesaplama/" target="_blank" rel="noopener noreferrer">Yüzde Hesaplama: İndirim ve Zam Oranı – TamListe</a></li>
-              <li><a href="https://kolayhesaplasana.com/yuzde-hesaplama" target="_blank" rel="noopener noreferrer">Yüzde Hesaplama 2026 — Formül ve Hesaplayıcı – Kolay Hesaplasana</a></li>
-            </ol>
-          </div>
-          
-        </div>
-           
+  <main>
+    <div class="main">
+      <div class="flex flex-col gap-30">
+        <h1 class="center-text">Yüzde Hesaplama</h1>
+        <h2 class="center-text">Matematik</h2>
       </div>
 
-    </main>
+      <div class="calculator-container">
+        <form id="yuzde-hesaplama">
+          <div class="flex flex-col gap-30">
+            <div class="flex flex-col gap-30">
+              <div class="flex flex-col gap-5">
+                <label for="methot">İşlem</label>
+                <select id="methot">
+                    <option value="islem1">1.Sayı, 2.sayının yüzde kaçıdır?</option>
+                    <option value="islem2">Bir sayının yüzdesini bulma</option>
+                </select>
+              </div>
+              <div class="flex flex-row justify-center items-center gap-30 stack-mobile">
+                <div class="flex flex-col flex-1 gap-5">
+                  <label for="sayi1">1.Sayı</label>
+                  <input required placeholder="1.Sayıyı yazınız." id="sayi1" type="number" step="0.01">
+                </div>
+                <div class="flex flex-col flex-1 gap-5">
+                  <label for="sayi2-yuzde">2.Sayı</label>
+                  <input required id="sayi2-yuzde" type="number" placeholder="2.Sayıyı yazınız." step="0.01">
+                </div>
+              </div>
+            </div>
 
-    <hesaplayicim-footer></hesaplayicim-footer>
-    
-    <script type="module" src="/src/js/index.js"></script>
-    <script src="/src/js/math/yuzde.js"></script>
+            <div class="flex flex-col gap-30">
+              <div class="flex flex-row justify-center items-center gap-30" id="result-btns">
+                <button type="submit" id="result-btn" class="btn btn--accent">Hesapla</button>
+                <button type="button" id="reset-btn" class="btn btn--outline">Sıfırla</button>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-30" id="result-area">
+              <div class="flex flex-row justify-center items-center gap-30" id="result-group">
+                <span>Sonuç</span>
+                <button title="Kopyala" type="button" class="btn btn--copy"><img src="/src/assets/icons/solar_copy-bold.svg" alt="kopyalama-butonu"></button>
+              </div>
+              <output id="result"></output>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="about">
+        <h3>Yüzde Hesaplama Hakkında</h3>
+        <p>Yüzde hesaplama, günlük hayatın en sık ihtiyaç duyulan matematik işlemlerinden biridir. Markette indirimli ürün alırken, maaş zammı hesaplarken ya da sınav notunuzu değerlendirirken yüzde hesabına başvurursunuz.</p>
+
+        <h4>Yüzde Nasıl Hesaplanır ?</h4>
+        <p>Bir sayının yüzdesini bulmak için şu formül kullanılır:</p>
+        <pre><code>
+          Yüzde (%) = (Parça ÷ Bütün) × 100
+          Sonuç = (Yüzde ÷ 100) × Sayı
+        </code></pre>
+
+        <h4>Yüzde İndirim Hesaplama</h4>
+        <p>Bir ürünün indirimli fiyatını bulmak için orijinal fiyatı indirim oranıyla çarpıp 100'e bölün, çıkan değeri orijinal fiyattan çıkarın.</p>
+        <pre><code>
+          İndirim Tutarı = Fiyat × (İndirim Oranı / 100)
+          İndirimli Fiyat = Fiyat - İndirim Tutarı
+        </code></pre>
+        <p><strong>Örnek:</strong> 1.500 TL fiyatlı üründe %30 indirim → 450 TL indirim → <strong>1.050 TL</strong></p>
+
+        <h4>Yüzde Artış Hesaplama</h4>
+        <p>Fiyat, maaş veya herhangi bir değer artışını hesaplamak için:</p>
+        <pre><code>Yeni Değer = Eski Değer × (1 + Artış Oranı / 100)</code></pre>
+        <p><strong>Örnek:</strong> 20.000 TL maaşa %15 zam → Yeni maaş <strong>23.000 TL</strong></p>
+
+        <h4>KDV Hesaplama</h4>
+        <p>Türkiye'de %20 KDV oranı için KDV dahil fiyat şöyle hesaplanır:</p>
+        <pre><code>KDV Dahil Fiyat = Net Fiyat × 1,20</code></pre>
+        <p><strong>Örnek:</strong> 500 TL net fiyat → KDV dahil <strong>600 TL</strong></p>
+
+        <h4>Hızlı Hesaplama İpuçları</h4>
+        <ul>
+          <li><strong>%10</strong> → Sayıyı 10'a böl</li>
+          <li><strong>%25</strong> → Sayıyı 4'e böl</li>
+          <li><strong>%50</strong> → Sayıyı 2'ye böl</li>
+          <li><strong>%15</strong> → %10 + %5 topla</li>
+        </ul>
+
+        <h4>Dikkat Edilmesi Gereken Nokta</h4>
+        <p>Yüzde artış ve yüzde azalış simetrik değildir. %50 artıştan sonra %50 azalış sizi başlangıç noktasına geri götürmez: 100 TL → +%50 → 150 TL → -%50 → 75 TL.</p>
+
+        <div class="sources">
+          <p class="sources-title">Kaynakça</p>
+          <ol>
+            <li><a href="https://vidoport.com/blog/yuzde-hesaplama-ve-yuzdelik-degisimlerin-puf-noktalarini-kesfedin" target="_blank" rel="noopener noreferrer">Yüzde Hesaplama: Formül ve Puf Noktaları – Vidoport</a></li>
+            <li><a href="https://hesapmatik.com/hesapla/yuzde-hesaplama/" target="_blank" rel="noopener noreferrer">Yüzde Hesaplama: Oran, Artış ve Azalış – HesapMatik</a></li>
+            <li><a href="https://kdv.hesaplama.net/" target="_blank" rel="noopener noreferrer">KDV Hesaplama Formülü – Hesaplama.net</a></li>
+            <li><a href="https://tamliste.tr/yuzde-indirim-zam-hesaplama/" target="_blank" rel="noopener noreferrer">Yüzde Hesaplama: İndirim ve Zam Oranı – TamListe</a></li>
+            <li><a href="https://kolayhesaplasana.com/yuzde-hesaplama" target="_blank" rel="noopener noreferrer">Yüzde Hesaplama 2026 — Formül ve Hesaplayıcı – Kolay Hesaplasana</a></li>
+          </ol>
+        </div>
+
+      </div>
+          
+    </div>
+
+  </main>
+
+  <hesaplayicim-footer></hesaplayicim-footer>
+  
+  <script type="module" src="/src/js/index.js"></script>
+  <script src="/src/js/math/yuzde.js"></script>
 </body>
 </html>

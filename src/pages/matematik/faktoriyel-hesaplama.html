@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ZGHWCHK493');
+  <!-- Google tag (gtag.js) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZGHWCHK493');
 
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      var s = document.createElement('script');
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZGHWCHK493';
-      s.async = true;
-      document.head.appendChild(s);
-    }, 3000);
-  });
-</script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZGHWCHK493';
+        s.async = true;
+        document.head.appendChild(s);
+      }, 3000);
+    });
+  </script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,14 +37,13 @@
   <script src="/src/pages/components/header.js" defer></script>
   <script src="/src/pages/components/footer.js" defer></script>
 
-
-
+  <!--Özel yazım stilleri-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
 
   <link rel="stylesheet" href="/src/css/styles.css">
 
-  <title>Faktöriyel Hesaplama - Hesaplayıcım</title>
+  <title>Faktöriyel Hesaplama - n! Hesapla, 0! Neden 1? | Hesaplayıcım</title>
     
 </head>
 
@@ -55,38 +54,36 @@
     <main>
       <div class="main">
         <div class="flex flex-col gap-30">
-            <h1 class="center-text">Faktöriyel Hesaplama</h1>
-            <h2 class="center-text">Matematik</h2>
+          <h1 class="center-text">Faktöriyel Hesaplama</h1>
+          <h2 class="center-text">Matematik</h2>
         </div>
 
         <div class="calculator-container">
-            <form id="faktoriyel-hesaplama">
-
-                <div class="flex flex-col gap-30">
-                    <div class="flex flex-col gap-30">
-                        <div class="flex flex-col gap-5">
-                            <label for="faktoriyel">Sayı Giriniz</label>
-                            <input min="0" type="number" id="faktoriyel" placeholder="Faktöriyel hesaplamak için sayı giriniz." required>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col gap-30">
-                        <div class="flex flex-row justify-center items-center gap-30" id="result-btns">
-                            <button type="submit" id="result-btn" class="btn btn--accent">Hesapla</button>
-                            <button type="button" id="reset-btn" class="btn btn--outline">Sıfırla</button>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col gap-30" id="result-area">
-                        <div class="flex flex-row justify-center items-center gap-30" id="result-group">
-                            <span>Sonuç</span>
-                            <button title="Kopyala" type="button" class="btn btn--copy"><img src="/src/assets/icons/solar_copy-bold.svg" alt="kopyalama-butonu"></button>
-                        </div>
-                        <output id="result"></output>
-                    </div>
+          <form id="faktoriyel-hesaplama">
+            <div class="flex flex-col gap-30">
+              <div class="flex flex-col gap-30">
+                <div class="flex flex-col gap-5">
+                  <label for="faktoriyel">Sayı Giriniz</label>
+                  <input min="0" type="number" id="faktoriyel" placeholder="Faktöriyel hesaplamak için sayı giriniz." required>
                 </div>
+              </div>
 
-            </form>
+              <div class="flex flex-col gap-30">
+                <div class="flex flex-row justify-center items-center gap-30" id="result-btns">
+                  <button type="submit" id="result-btn" class="btn btn--accent">Hesapla</button>
+                  <button type="button" id="reset-btn" class="btn btn--outline">Sıfırla</button>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-30" id="result-area">
+                <div class="flex flex-row justify-center items-center gap-30" id="result-group">
+                  <span>Sonuç</span>
+                  <button title="Kopyala" type="button" class="btn btn--copy"><img src="/src/assets/icons/solar_copy-bold.svg" alt="kopyalama-butonu"></button>
+                </div>
+                <output id="result"></output>
+              </div>
+            </div>
+          </form>
         </div>
 
         <div class="about">

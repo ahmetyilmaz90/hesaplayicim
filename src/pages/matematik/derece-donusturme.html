@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<!-- Google tag (gtag.js) -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ZGHWCHK493');
+    <!-- Google tag (gtag.js) -->
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZGHWCHK493');
 
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      var s = document.createElement('script');
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZGHWCHK493';
-      s.async = true;
-      document.head.appendChild(s);
-    }, 3000);
-  });
-</script>
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZGHWCHK493';
+        s.async = true;
+        document.head.appendChild(s);
+        }, 3000);
+    });
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,11 +37,9 @@
     <script src="/src/pages/components/header.js" defer></script>
     <script src="/src/pages/components/footer.js" defer></script>
 
-
-
     <link rel="stylesheet" href="/src/css/styles.css">
 
-    <title>Derece Dönüştürme - Hesaplayıcım</title>
+    <title>Derece Dönüştürme - Derece/Radyan Çevirme | Hesaplayıcım</title>
 
 </head>
 <body>
@@ -49,117 +47,107 @@
   <hesaplayicim-header></hesaplayicim-header>
 
     <main>
-      <div class="main">
-        <div class="flex flex-col gap-30">
-            <h1 class="center-text">Derece Dönüştürme</h1>
-            <h2 class="center-text">Matematik</h2>
-        </div>
+        <div class="main">
+            <div class="flex flex-col gap-30">
+                <h1 class="center-text">Derece Dönüştürme</h1>
+                <h2 class="center-text">Matematik</h2>
+            </div>
 
-        <div class="calculator-container">
-            <form id="derece-donusturme">
-
-                <div class="flex flex-col gap-30">
-                    <div class="flex flex-col gap-30">
-                        <div class="flex flex-row justify-center items-center gap-30">
-                            <div class="flex flex-col flex-1 gap-5">
-                                <label for="from">Giriş Birimi</label>
-                                <select id="from">
-                                    <option value="deg">Derece</option>
-                                    <option value="rad">Radyan</option>
-                                    <option value="grad">Gradyan</option>
-                                </select>
-                            </div>
-
-                            <div class="flex flex-col flex-1 gap-5">
-                                <label for="to">Çıkış Birimi</label>
-                                <select id="to">
-                                    <option value="deg">Derece</option>
-                                    <option value="rad">Radyan</option>
-                                    <option value="grad">Gradyan</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-5">
-                            <label for="sayi">Açı Ölçüsü</label>
-                            <input type="number" id="sayi" placeholder="Açı ölçüsünü giriniz." step="0.01" required>
-                        </div>
-                    </div>
+            <div class="calculator-container">
+                <form id="derece-donusturme">
 
                     <div class="flex flex-col gap-30">
-                        <div class="flex flex-row justify-center items-center gap-30" id="result-btns">
-                            <button type="submit" id="result-btn" class="btn btn--accent">Hesapla</button>
-                            <button type="button" id="reset-btn" class="btn btn--outline">Sıfırla</button>
+                        <div class="flex flex-col gap-30">
+                            <div class="flex flex-row justify-center items-center gap-30">
+                                <div class="flex flex-col flex-1 gap-5">
+                                    <label for="from">Giriş Birimi</label>
+                                    <select id="from">
+                                        <option value="deg">Derece</option>
+                                        <option value="rad">Radyan</option>
+                                        <option value="grad">Gradyan</option>
+                                    </select>
+                                </div>
+
+                                <div class="flex flex-col flex-1 gap-5">
+                                    <label for="to">Çıkış Birimi</label>
+                                    <select id="to">
+                                        <option value="deg">Derece</option>
+                                        <option value="rad">Radyan</option>
+                                        <option value="grad">Gradyan</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-5">
+                                <label for="sayi">Açı Ölçüsü</label>
+                                <input type="number" id="sayi" placeholder="Açı ölçüsünü giriniz." step="0.01" required>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-30">
+                            <div class="flex flex-row justify-center items-center gap-30" id="result-btns">
+                                <button type="submit" id="result-btn" class="btn btn--accent">Hesapla</button>
+                                <button type="button" id="reset-btn" class="btn btn--outline">Sıfırla</button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-30" id="result-area">
+                            <div class="flex flex-row justify-center items-center gap-30" id="result-group">
+                                <span>Sonuç</span>
+                                <button title="Kopyala" type="button" class="btn btn--copy"><img src="/src/assets/icons/solar_copy-bold.svg" alt="kopyalama-butonu"></button>
+                            </div>
+                            <output id="result"></output>
                         </div>
                     </div>
 
-                    <div class="flex flex-col gap-30" id="result-area">
-                        <div class="flex flex-row justify-center items-center gap-30" id="result-group">
-                            <span>Sonuç</span>
-                            <button title="Kopyala" type="button" class="btn btn--copy"><img src="/src/assets/icons/solar_copy-bold.svg" alt="kopyalama-butonu"></button>
-                        </div>
-                        <output id="result"></output>
-                    </div>
+                </form>
+            </div>
+
+            <div class="about">
+                <h3>Derece Dönüştürme Hakkında</h3>
+                <p>Açıları ifade etmenin birden fazla yolu vardır. Günlük hayatta kapının ne kadar açıldığını ya da bir dönüşü tarif ederken sıklıkla derece kullanırız. Ancak matematik ve fizik dünyasında radyan, inşaat ve haritacılık alanında ise gradyan çok daha yaygın birimlerdir.</p>
+
+                <h4>Radyan Nedir? </h4>
+                <p>Radyan, açıyı çember üzerindeki yay uzunluğuna göre ifade eden birimdir. Bir çemberin tam turu 360° iken radyan cinsinden 2π'ye eşittir.</p>
+
+                <h4>Gradyan Nedir?</h4>
+                <p>Gradyan, tam çemberi 400 eşit parçaya bölen açı ölçü birimidir. Bu sayede her çeyrek tur tam 100 gradyana karşılık gelir; bu da inşaat ve haritacılık hesaplarını oldukça kolaylaştırır.</p>
+
+                <h4>1 Radyan Kaç Derecedir?</h4>
+                <p>1 radyan, yaklaşık <strong>57.2958 dereceye</strong> eşittir. Bunun nedeni <strong>180° = π radyan</strong> eşitliğinden gelir:</p>
+                <pre><code>1 radyan = 180 / π ≈ 57.2958°</code></pre>
+
+                <h4>Derece Dönüştürme Formülleri</h4>
+                <ul>
+                <li><strong>Radyan</strong> → Derece × (π / 180)</li>
+                <li><strong>Radyan</strong> → Gradyan × (π / 200)</li>
+                <li><strong>Derece</strong> → Radyan × (180 / π)</li>
+                <li><strong>Derece</strong> → Gradyan × (360 / 400)</li>
+                <li><strong>Gradyan</strong> → Derece × (400 / 360)</li>
+                <li><strong>Gradyan</strong> → Radyan × (200 / π)</li>
+                </ul>
+
+                <h4>Sık Kullanılan Değerler</h4>
+                <ul>
+                <li>45° = π/4 radyan = 50 gradyan</li>
+                <li>90° = π/2 radyan = 100 gradyan</li>
+                <li>180° = π radyan = 200 gradyan</li>
+                <li>360° = 2π radyan = 400 gradyan</li>
+                </ul>
+
+                <div class="sources">
+                    <p class="sources-title">Kaynakça</p>
+                    <ol>
+                        <li><a href="https://tr.wikipedia.org/wiki/A%C3%A7%C4%B1" target="_blank" rel="noopener noreferrer">Açı – Vikipedi</a></li>
+                        <li><a href="https://tr.wikipedia.org/wiki/Grad" target="_blank" rel="noopener noreferrer">Grad (Açı Birimi) – Vikipedi</a></li>
+                        <li><a href="https://yunus.hacettepe.edu.tr/~adil/337488.pdf" target="_blank" rel="noopener noreferrer">Ölçme Bilgisi – Hacettepe Üniversitesi</a></li>
+                        <li><a href="https://kunduz.com/tr/konular/trigonometri/aci-olcu-birimleri-ve-esas-olcu/aci-olcu-birimleri-radyan/" target="_blank" rel="noopener noreferrer">Açı Ölçü Birimleri: Radyan Konu Anlatımı – Kunduz</a></li>
+                        <li><a href="https://tr.linkedin.com/pulse/radyan-ve-steradyan-%C3%BCzerine-lokman-kuzu" target="_blank" rel="noopener noreferrer">Radyan ve Steradyan Üzerine – LinkedIn</a></li>
+                    </ol>
                 </div>
 
-            </form>
+            </div>
+
         </div>
-
-      <div class="about">
-        <h3>Derece Dönüştürme Hakkında</h3>
-        <p>
-Açıları ifade etmenin birden fazla yolu vardır. Günlük hayatta kapının ne kadar açıldığını ya da bir dönüşü tarif ederken sıklıkla derece kullanırız. Ancak matematik ve fizik dünyasında radyan, inşaat ve haritacılık alanında ise gradyan çok daha yaygın birimlerdir.
-        </p>
-
-        <h4>Radyan Nedir? </h4>
-        <p>
-Radyan, açıyı çember üzerindeki yay uzunluğuna göre ifade eden birimdir. Bir çemberin tam turu 360° iken radyan cinsinden 2π'ye eşittir.
-        </p>
-
-        <h4>Gradyan Nedir?</h4>
-        <p>
-Gradyan, tam çemberi 400 eşit parçaya bölen açı ölçü birimidir. Bu sayede her çeyrek tur tam 100 gradyana karşılık gelir; bu da inşaat ve haritacılık hesaplarını oldukça kolaylaştırır.
-        </p>
-
-        <h4>1 Radyan Kaç Derecedir?</h4>
-        <p>
-          1 radyan, yaklaşık <strong>57.2958 dereceye</strong> eşittir. Bunun nedeni <strong>180° = π radyan</strong> eşitliğinden gelir:
-        </p>
-        <pre><code>1 radyan = 180 / π ≈ 57.2958°</code></pre>
-
-        <h4>Derece Dönüştürme Formülleri</h4>
-
-        <ul>
-          <li><strong>Radyan</strong> → Derece × (π / 180)</li>
-          <li><strong>Radyan</strong> → Gradyan × (π / 200)</li>
-          <li><strong>Derece</strong> → Radyan × (180 / π)</li>
-          <li><strong>Derece</strong> → Gradyan × (360 / 400)</li>
-          <li><strong>Gradyan</strong> → Derece × (400 / 360)</li>
-          <li><strong>Gradyan</strong> → Radyan × (200 / π)</li>
-        </ul>
-
-        <h4>Sık Kullanılan Değerler</h4>
-        <ul>
-          <li>45° = π/4 radyan = 50 gradyan</li>
-          <li>90° = π/2 radyan = 100 gradyan</li>
-          <li>180° = π radyan = 200 gradyan</li>
-          <li>360° = 2π radyan = 400 gradyan</li>
-        </ul>
-
-        <div class="sources">
-        <p class="sources-title">Kaynakça</p>
-        <ol>
-            <li><a href="https://tr.wikipedia.org/wiki/A%C3%A7%C4%B1" target="_blank" rel="noopener noreferrer">Açı – Vikipedi</a></li>
-            <li><a href="https://tr.wikipedia.org/wiki/Grad" target="_blank" rel="noopener noreferrer">Grad (Açı Birimi) – Vikipedi</a></li>
-            <li><a href="https://yunus.hacettepe.edu.tr/~adil/337488.pdf" target="_blank" rel="noopener noreferrer">Ölçme Bilgisi – Hacettepe Üniversitesi</a></li>
-            <li><a href="https://kunduz.com/tr/konular/trigonometri/aci-olcu-birimleri-ve-esas-olcu/aci-olcu-birimleri-radyan/" target="_blank" rel="noopener noreferrer">Açı Ölçü Birimleri: Radyan Konu Anlatımı – Kunduz</a></li>
-            <li><a href="https://tr.linkedin.com/pulse/radyan-ve-steradyan-%C3%BCzerine-lokman-kuzu" target="_blank" rel="noopener noreferrer">Radyan ve Steradyan Üzerine – LinkedIn</a></li>
-        </ol>
-        </div>
-
-      </div>
-
-      </div>
-
     </main>
 
     <hesaplayicim-footer></hesaplayicim-footer>
